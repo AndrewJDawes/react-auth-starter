@@ -16,7 +16,7 @@ export const SignUpPage = () => {
         })
         const newToken = response.data?.token;
         setToken(newToken);
-        history.push('/please-verify');
+        history.push(`/please-verify?email=${encodeURIComponent(emailValue)}`);
         // alert('Sign Up not implemented yet')
     }
     return (

@@ -7,6 +7,7 @@ import { PleaseVerifyEmailPage } from './pages/PleaseVerifyEmailPage';
 import { EmailVerificationLandingPage } from './pages/EmailVerificationLandingPage';
 import { ForgotPasswordPage } from './pages/ForgotPasswordPage';
 import { PasswordResetLandingPage } from './pages/PasswordResetLandingPage';
+import { EmailVerificationCodePage } from './pages/EmailVerificationCodePage';
 
 export const Routes = () => {
     return (
@@ -21,6 +22,9 @@ export const Routes = () => {
                 <Route path="/signup" exact>
                     <SignUpPage />
                 </Route>
+                <Route path="/verify-email" exact>
+                    <EmailVerificationCodePage></EmailVerificationCodePage>
+                </Route>
                 <Route path="/verify-email/:verificationString" exact>
                     <EmailVerificationLandingPage />
                 </Route>
@@ -30,7 +34,7 @@ export const Routes = () => {
                 <Route path="/forgot-password" exact>
                     <ForgotPasswordPage />
                 </Route>
-                <Route path="/reset-password/:passwordResetCode" exact>
+                <Route path="/reset-password" exact>
                     <PasswordResetLandingPage />
                 </Route>
             </Switch>
